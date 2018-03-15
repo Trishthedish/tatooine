@@ -1,0 +1,30 @@
+version: '3'
+services:
+  frontend-deps:
+    build: '.'
+    working_dir: '/frontend'
+    volumes:
+      - 'node_modules:/frontend/node_modules'
+
+  frontend-watch:
+    image: 'node:9-alpine'
+    working_dir: '/frontend'
+    depends_on:
+      - 'frontend-deps'
+    volumes:
+      - './frontend:/frontend'
+      - 'node_modules:/frontend/node_modules'
+    entrypoint: 'yarn run watch'
+
+  frontend-server:
+    image: 'node:9-alpine'
+    working_dir: '/frontend'
+    depends_on:
+      - 'frontend-deps'
+    volumes:
+      - './frontend:/frontend'
+      - 'node_modules:/frontend/node_modules'
+    entrypoint: 'yarn run server'
+
+volumes:
+  node_modules:

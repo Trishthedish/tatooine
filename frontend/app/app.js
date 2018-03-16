@@ -1,9 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Sidebar from './components/sidebar';
+import Home from './components/home';
 
 class App extends React.Component {
   render() {
-    return <h1>Hello world!</h1>;
+    return <div className="app row">
+      <Sidebar />
+      <Home />
+    </div>;
   }
 }
 

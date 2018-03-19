@@ -1,7 +1,7 @@
-const path = require('path');
-
-const APP_DIR = path.resolve(__dirname, 'app');
-const BUILD_DIR = path.resolve(__dirname, 'public');
+const path = require('path'),
+  os = require('os'),
+  APP_DIR = path.resolve(__dirname, 'app'),
+  BUILD_DIR = path.resolve(__dirname, 'public');
 
 module.exports = {
   entry: [APP_DIR + '/app.js'],
@@ -22,5 +22,17 @@ module.exports = {
   output: {
     filename: 'bundle.js',
     path: BUILD_DIR
+  },
+  resolveLoader: {
+    modules: [
+      path.resolve(os.homedir(), '.node_modules'),
+      'node_modules'
+    ]
+  },
+  resolve: {
+    modules: [
+      path.resolve(os.homedir(), '.node_modules'),
+      'node_modules'
+    ]
   }
 };

@@ -2,7 +2,8 @@
   "dependencies": {
     "express": "^4.16.3",
     "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "react-dom": "^16.2.0",
+    "react-router-dom": "^4.2.2"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -18,7 +19,7 @@
     "webpack-cli": "^2.0.12"
   },
   "scripts": {
-    "watch": "./node_modules/.bin/webpack --mode development --watch --watch-poll 1000",
-    "server": "./node_modules/.bin/nodemon --watch lib lib/server.js"
+    "watch": "webpack --mode development --watch --watch-poll 1000",
+    "server": "nodemon --watch lib lib/server.js"
   }
 }

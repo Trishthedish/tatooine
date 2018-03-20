@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import '../styles/sidebar.less';
 
 export default class Sidebar extends React.Component {
@@ -7,13 +7,13 @@ export default class Sidebar extends React.Component {
     return <div className="sidebar two columns">
       <ul>
         <li>
-          <Link to='/'>Home</Link>
+          <NavLink exact to='/'>Home</NavLink>
         </li>
         <li>
-          <Link to='/css-cantina'>CSS Cantina</Link>
+          <NavLink exact to='/css-cantina'>CSS Cantina</NavLink>
         </li>
         <li>
-          <Link to='/map-room'>Map Room</Link>
+          <NavLink exact to='/map-room'>Map Room</NavLink>
         </li>
       </ul>
     </div>;

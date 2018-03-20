@@ -3,7 +3,8 @@
     "express": "^4.16.3",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "react-router-dom": "^4.2.2"
+    "react-router-dom": "^4.2.2",
+    "skeleton-less": "^2.0.1"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",

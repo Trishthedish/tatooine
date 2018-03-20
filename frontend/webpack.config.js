@@ -14,7 +14,10 @@ module.exports = {
       },
       {
         test: /\.less$/,
-        include: APP_DIR + '/styles',
+        include: [
+          path.resolve(os.homedir(), '.node_modules'),
+          APP_DIR + '/styles'
+        ],
         loaders: ['style-loader', 'css-loader', 'less-loader'],
       }
     ]

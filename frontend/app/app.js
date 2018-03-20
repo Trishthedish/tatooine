@@ -1,17 +1,34 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Sidebar from './components/sidebar';
+import CSSCantina from './components/css-cantina';
 import Home from './components/home';
-import { BrowserRouter as Router } from 'react-router-dom'
+import MapRoom from './components/map-room';
+import {
+  BrowserRouter as Router,
+  Link,
+  NavLink,
+  Route,
+  Switch
+} from 'react-router-dom';
 
 class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.pushState = 'pushState' in window.history;
+  }
+
   render() {
-    const pushState = 'pushState' in window.history;
     return <Router onUpdate={() => window.scrollTo(0,0)}
-                   forceRefresh={!pushState}>
-      <div className="app row">
+                   forceRefresh={!this.pushState}>
+      <div className='app row'>
         <Sidebar />
-        <Home />
+        <Switch>
+          <Route exact path='/' component={Home} />
+          <Route exact path='/css-cantina' component={CSSCantina} />
+          <Route exact path='/map-room' component={MapRoom} />
+          <Route render={() => 'Not found!'} />
+        </Switch>
       </div>
     </Router>;
   }

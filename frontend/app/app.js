@@ -5,7 +5,7 @@ import CSSCantina from './components/css-cantina';
 import Home from './components/home';
 import MapRoom from './components/map-room';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import 'skeleton-less/less/skeleton.less';
+import './styles/style.less';
 
 class App extends React.Component {
   constructor(props) {

@@ -1,5 +1,4 @@
 import React from 'react';
-import '../styles/css-cantina.less';
 
 export default class CSSCantina extends React.Component {
   render() {

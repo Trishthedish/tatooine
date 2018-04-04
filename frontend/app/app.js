@@ -4,6 +4,7 @@ import Sidebar from './components/sidebar';
 import CSSCantina from './components/css-cantina';
 import Home from './components/home';
 import MapRoom from './components/map-room';
+import FamilyTree from './components/family-tree';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './styles/style.less';
 
@@ -22,6 +23,7 @@ class App extends React.Component {
           <Route exact path='/' component={Home} />
           <Route exact path='/css-cantina' component={CSSCantina} />
           <Route exact path='/map-room' component={MapRoom} />
+          <Route exact path='/family-tree' component={FamilyTree} />
           <Route render={() => 'Not found!'} />
         </Switch>
       </div>

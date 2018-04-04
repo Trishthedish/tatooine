@@ -14,6 +14,9 @@ export default class Sidebar extends React.Component {
         <li>
           <NavLink exact to='/map-room'>Map Room</NavLink>
         </li>
+        <li>
+          <NavLink exact to='/family-tree'>Family Tree</NavLink>
+        </li>
       </ul>
     </div>;
   }
